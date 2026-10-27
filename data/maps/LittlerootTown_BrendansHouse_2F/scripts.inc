@@ -299,3 +299,17 @@ PlayersHouse_2F_Text_ItsAGameCube:
 	.string "It's a Nintendo GameCube.\p"
 	.string "A Game Boy Advance is connected to\n"
 	.string "serve as the Controller.$"
+
+@ Pokemon Asteria proof-of-event: the upstairs Pokeball replaces the GameCube interaction.
+Asteria_EventScript_UpstairsPokeBall::
+    lockall
+    msgbox Asteria_Text_UpstairsPokeBall, MSGBOX_DEFAULT
+    msgbox Asteria_Text_LinneaInvitation, MSGBOX_DEFAULT
+    releaseall
+    end
+
+Asteria_Text_UpstairsPokeBall:
+    .string "A POKe BALL rests on the desk.\pIt has a note from PROF. ASPEN.$"
+
+Asteria_Text_LinneaInvitation:
+    .string "LINNEA: Hey! I'm LINNEA, your\nneighbor!\pPROF. ASPEN is waiting at the\nlab. Let's go meet him!$"
