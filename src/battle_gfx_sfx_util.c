@@ -755,12 +755,14 @@ bool8 BattleLoadAllHealthBoxesGfx(u8 state)
         case 5:
             spriteSheet = &sSpriteSheets_DoublesOpponentHealthbox[1];
             break;
-        case 6 ... 9:
-            enum BattlerPosition position = GetBattlerPosition((enum BattlerId)(state - 6));
-            spriteSheet = &sSpriteSheets_HealthBar[position];
-            break;
-        default:
-            return TRUE;
+       case 6 ... 9:
+{
+    enum BattlerPosition position = GetBattlerPosition((enum BattlerId)(state - 6));
+    spriteSheet = &sSpriteSheets_HealthBar[position];
+    break;
+}
+default:
+    return TRUE;
         }
     }
     else
@@ -773,14 +775,15 @@ bool8 BattleLoadAllHealthBoxesGfx(u8 state)
         case 3:
             spriteSheet = B_HP_PERCENTAGE_DISPLAY ? &sSpriteSheet_SinglesOpponentLargeHealthbox : &sSpriteSheet_SinglesOpponentHealthbox;
             break;
-        case 4:
-        case 5:
-            enum BattlerPosition position = GetBattlerPosition((enum BattlerId)(state - 4));
-            spriteSheet = &sSpriteSheets_HealthBar[position];
-            break;
-        default:
-            return TRUE;
-        }
+       case 4:
+case 5:
+{
+    enum BattlerPosition position = GetBattlerPosition((enum BattlerId)(state - 4));
+    spriteSheet = &sSpriteSheets_HealthBar[position];
+    break;
+}
+default:
+    return TRUE;
     }
 
     LoadCompressedSpriteSheet(spriteSheet);
