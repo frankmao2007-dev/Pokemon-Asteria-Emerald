@@ -296,3 +296,11 @@ Route101_Text_RouteSign:
 	.string "ROUTE 101\n"
 	.string "{UP_ARROW} OLDALE TOWN$"
 
+
+@ Asteria Demo 0.1 marker at the existing Route 101 sign.
+Asteria_EventScript_Route1DemoSign::
+    msgbox Asteria_Text_Route1DemoEnd, MSGBOX_SIGN
+    end
+
+Asteria_Text_Route1DemoEnd:
+    .string "ROUTE 1\pEND OF POKeMON ASTERIA DEMO 0.1!\nThanks for testing!$"
