@@ -992,3 +992,18 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "we meet. I'll be waiting!\p"
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
+
+@ Asteria proof-of-event NPC dialogue. Existing Emerald starter mechanics remain intact.
+Asteria_EventScript_Linus::
+    msgbox Asteria_Text_Linus, MSGBOX_NPC
+    end
+
+Asteria_EventScript_Aspen::
+    msgbox Asteria_Text_Aspen, MSGBOX_NPC
+    end
+
+Asteria_Text_Linus:
+    .string "LINUS: Welcome to AURAROOT!\pI'm helping PROF. ASPEN with\nhis research.$"
+
+Asteria_Text_Aspen:
+    .string "ASPEN: Welcome to my lab!\pTREECKO, TORCHIC and MUDKIP\nare our starter POKeMON.$"
