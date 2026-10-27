@@ -785,7 +785,7 @@ case 5:
 default:
     return TRUE;
     }
-
+    }
     LoadCompressedSpriteSheet(spriteSheet);
     return FALSE;
 }
